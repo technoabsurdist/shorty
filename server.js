@@ -13,10 +13,14 @@ mongoose.connect('mongodb://localhost/urlShortener', {
 
 
 
+
+
+/* =========== ENDPOINTS ========== */ 
+
+// global methods
 app.set('view engine', 'ejs')
 app.use(express.urlencoded({ extended: false }))
 
-/* =========== METHODS ==========*/ 
 // GET / 
 app.get("/", async (req, res) => {
     const shortUrls = await ShortUrl.find()
